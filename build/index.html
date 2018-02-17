@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/print.css" rel="stylesheet" media="print">
+    <!-- b/c style css reads the font-->
+</head>
+
+<body>
+<!--
+    <header class='title-header'>
+        <h1>Workout Selector</h1>
+    </header>
+-->
+    <div id="reactHeader"></div>
+    <main class="landing">
+        <div class='catch'>
+            <h2>Application Features</h2><br>
+            <span>Workout Selector helps beginner and intermidate level lifters find a workout routine that fits your needs! Fully customizable.Click the weights to start answering a series of questions that will point you towards a solid routine that meets your needs.Some routines overlap.</span><br><br>
+            <div class="column-three">
+                <h4>Personalized</h4>
+                <div class='icon'><i class="fa fa-bars" aria-hidden="true"></i></div>
+                <h4>Routines</h4>
+            </div>
+            <div class="column-three">
+                <h4>Customize</h4>
+                <div class='icon'><i class="fa fa-cog" aria-hidden="true"></i></div>
+                <h4>Workouts</h4>
+            </div>
+            <div class="column-three">
+                <h4>Display</h4>
+                <div class='icon'><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></div>
+                <h4>Calendar</h4>
+            </div>
+            <div><br><input class='start-button selector' id='start' type="button" value=''></div>
+        </div>
+    </main>
+    <main class="question-one">
+        <div>
+            <form action="">
+                <div class='questions'>
+                    <h3>Describe your workout experience.</h3>
+                </div>
+                <div class="choices">
+                    <input class='user-input start-button beginner ' id='question-one' type="button" name="skill" value="Beginner">
+                    <input class='user-input start-button advanced ' id='question-one' type="button" name="skill" value="Advanced">
+
+                </div>
+            </form>
+        </div>
+    </main>
+    <main class="question-two">
+        <div class='questions'>
+            <h3>What are your workout goals?</h3>
+        </div>
+        <div class="choices">
+            <input class='user-input start-button strength' id='question-two' type="button" name="goal" value="Strength">
+            <input class='user-input start-button hypertrophy' id='question-two' type="button" name="goal" value="Hypertrophy">
+            <input class='user-input start-button conditioning' id='question-two' type="button" name="goal" value="Conditioning">
+
+        </div>
+    </main>
+    <main class="question-three">
+        <div class='questions'>
+            <h3>How many days a week can you dedicate to lifting?</h3>
+        </div>
+        <div class="choices">
+            <input class='user-input start-button threex' type="button" id='question-three' name="frequency" value="Three or Less">
+            <input class='user-input start-button fourx' type="button" id='question-three' name="frequency" value="Four">
+            <input class='user-input start-button fivex' type="button" id='question-three' name="frequency" value="Five or More"> </div>
+
+    </main>
+    <main class="results">
+        <div>
+            <h3 class="workout-header">You Selected:</h3>
+        </div>
+        <div class='user-select'>
+            <div class='column-three-selected beginner-display '>Beginner</div>
+            <div class='column-three-selected advanced-display '>Advanced</div>
+            <div class='column-three-selected strength-display '>Strength</div>
+            <div class='column-three-selected hypertrophy-display'>Hypertrophy</div>
+            <div class='column-three-selected conditioning-display '>Conditioning</div>
+            <div class='column-three-selected threex-display '>3x</div>
+            <div class='column-three-selected fourx-display '>4x</div>
+            <div class='column-three-selected fivex-display '>5x</div>
+
+
+        </div>
+        <div class="recommend">
+            <h2 class='title'></h2>
+            <span class='website'></span><br>
+        </div>
+        <div class='calendar'>
+            <h3>Week 1</h3>
+            <div class='seven-cols 1'>
+                <h3 class='day'>Mon</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='1'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+            <div class='seven-cols 2' value='2'>
+                <h3 class='day'>Tue</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='2'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+
+                    </form>
+                </div>
+            </div>
+            <div class='seven-cols 3'>
+                <h3 class='day' value='3'>Wed</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='3'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+            <div class='seven-cols 4'>
+                <h3 class='day' value='4'>Thu</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='4'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+            <div class='seven-cols 5'>
+                <h3 class='day' value='5'>Fri</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='5'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class='seven-cols 6'>
+                <h3 class='day' value='6'>Sat</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='6'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class='seven-cols 7'>
+                <h3 class='day' value='7'>Sun</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='7'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class='calendar'>
+            <h3>Week 2</h3>
+            <div class='seven-cols 8'>
+                <h3 class='day' value='8'>Mon</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='8'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+            <div class='seven-cols 9'>
+                <h3 class='day' value='9'>Tue</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='9'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+            <div class='seven-cols 10'>
+                <h3 class='day' value='10'>Wed</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='10'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+            <div class='seven-cols 11'>
+                <h3 class='day' value='11'>Thu</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='11'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+            <div class='seven-cols 12'>
+                <h3 class='day' value='12'>Fri</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='12'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+            <div class='seven-cols 13'>
+                <h3 class='day' value='13'>Sat</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='13'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+            <div class='seven-cols 14'>
+                <h3 class='day' value='14'>Sun</h3>
+                <button class='add-exercise'><i class='fa fa-plus' aria-hidden='true'></i></button>
+                <div class='exercises'>
+                    <form class='exercise exercise-form'>
+                        <input class='add-exercise-day' type='hidden' value='14'>
+                        <h4>Exercise Name</h4>
+                        <input type='text' class='exercise-name'>
+                        <h4>Sets</h4>
+                        <input type='number' class='exercise-sets'>
+                        <h4>Reps</h4>
+                        <input type='number' class='exercise-reps'>
+                        <button class='plus-exercise' value='add' type='submit'>
+                            <i class='fa fa-plus' aria-hidden='true'></i>
+                        </button>
+                        <button class='form-minus-exercise'>
+                            <a href='#' class='form-minus-exercise'><i class='fa fa-minus' aria-hidden='true'></i></a></button>
+                    </form>
+                </div>
+            </div>
+            <div class='recommend'>
+                <input type='submit' id='restart' class='start-button selector' value='Back to Selector'>
+                <input type='submit' class='start-button print' value='Print'></div>
+
+        </div>
+
+    </main>
+    <footer>
+
+        <ul>
+            <li>
+                <p>&#xa9; 2017 Rahul Vaidya</p>
+            </li>
+            <li>
+                <a href="https://github.com/rvaidyaa" title="Check out my code on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="mailto:rvaidyaa@gmail.com?Subject=Hello" title="Send me an email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src='assets/client.js'></script>
+    <script src='index.js'></script>
+</body>
+
+</html>
