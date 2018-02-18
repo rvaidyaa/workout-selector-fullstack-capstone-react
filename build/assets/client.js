@@ -76,7 +76,9 @@ function getExercisesByName(exerciseName) {
         })
         .done(function (dataOutput) {
             console.log(dataOutput);
-            displayExerciseOnCalendar(dataOutput.item);
+            if (dataOutput.item.length != 0) {
+                displayExerciseOnCalendar(dataOutput.item);
+            }
 
         })
         .fail(function (jqXHR, error, errorThrown) {
@@ -417,7 +419,7 @@ $(document).on('click', '.minus-exercise', function (event) {
 });
 //print view
 $(document).on('click', '.print', function (event) {
-    alert('print clicked');
+    window.print();
 });
 
 

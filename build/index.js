@@ -60,6 +60,18 @@
 	
 	var _header2 = _interopRequireDefault(_header);
 	
+	var _footer = __webpack_require__(546);
+	
+	var _footer2 = _interopRequireDefault(_footer);
+	
+	var _landing = __webpack_require__(547);
+	
+	var _landing2 = _interopRequireDefault(_landing);
+	
+	var _questionOne = __webpack_require__(548);
+	
+	var _questionOne2 = _interopRequireDefault(_questionOne);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var render = _reactDom2.default.render;
@@ -68,6 +80,15 @@
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	                        return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_footer2.default, null), document.getElementById('reactFooter'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_landing2.default, null), document.getElementById('reactLanding'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_questionOne2.default, null), document.getElementById('reactquestion-one'));
 	});
 
 /***/ }),
@@ -64923,6 +64944,260 @@
 	}
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 546 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = Footer;
+	
+	__webpack_require__(60);
+	
+	__webpack_require__(128);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(130);
+	
+	var _enzymeAdapterReact = __webpack_require__(527);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Footer(props) {
+	    return _react2.default.createElement(
+	        'footer',
+	        null,
+	        _react2.default.createElement(
+	            'ul',
+	            null,
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    '\xA9 2017 Rahul Vaidya'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/rvaidyaa', title: 'Check out my code on GitHub' },
+	                    _react2.default.createElement('i', { className: 'fa fa-github', 'aria-hidden': 'true' })
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'mailto:rvaidyaa@gmail.com?Subject=Hello', title: 'Send me an email' },
+	                    _react2.default.createElement('i', { className: 'fa fa-envelope', 'aria-hidden': 'true' })
+	                )
+	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 547 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = Landing;
+	
+	__webpack_require__(60);
+	
+	__webpack_require__(128);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(130);
+	
+	var _enzymeAdapterReact = __webpack_require__(527);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Landing(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { className: 'landing' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'catch' },
+	            _react2.default.createElement(
+	                'h2',
+	                null,
+	                'Application Features'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                'span',
+	                null,
+	                'Workout Selector helps beginner and intermidate level lifters find a workout routine that fits your needs! Fully customizable.Click the weights to start answering a series of questions that will point you towards a solid routine that meets your needs.Some routines overlap.'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column-three' },
+	                _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    'Personalized'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'icon' },
+	                    _react2.default.createElement('i', { className: 'fa fa-bars', 'aria-hidden': 'true' })
+	                ),
+	                _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    'Routines'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column-three' },
+	                _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    'Customize'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'icon' },
+	                    _react2.default.createElement('i', { className: 'fa fa-cog', 'aria-hidden': 'true' })
+	                ),
+	                _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    'Workouts'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column-three' },
+	                _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    'Display'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'icon' },
+	                    _react2.default.createElement('i', { className: 'fa fa-calendar-minus-o', 'aria-hidden': 'true' })
+	                ),
+	                _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    'Calendar'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('input', { className: 'start-button selector', id: 'start', type: 'button', value: '' })
+	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 548 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = QuestionOne;
+	
+	__webpack_require__(60);
+	
+	__webpack_require__(128);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(130);
+	
+	var _enzymeAdapterReact = __webpack_require__(527);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function QuestionOne(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { className: 'question-one' },
+	        _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                'form',
+	                { action: '' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'questions' },
+	                    _react2.default.createElement(
+	                        'h3',
+	                        null,
+	                        'Describe your workout experience.'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'choices' },
+	                    _react2.default.createElement('input', { className: 'user-input start-button beginner ', id: 'question-one', type: 'button', name: 'skill', value: 'Beginner' }),
+	                    _react2.default.createElement('input', { className: 'user-input start-button advanced ', id: 'question-one', type: 'button', name: 'skill', value: 'Advanced' })
+	                )
+	            )
+	        )
+	    );
+	}
 
 /***/ })
 /******/ ]);
