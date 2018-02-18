@@ -72,6 +72,14 @@
 	
 	var _questionOne2 = _interopRequireDefault(_questionOne);
 	
+	var _questionTwo = __webpack_require__(549);
+	
+	var _questionTwo2 = _interopRequireDefault(_questionTwo);
+	
+	var _questionThree = __webpack_require__(550);
+	
+	var _questionThree2 = _interopRequireDefault(_questionThree);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var render = _reactDom2.default.render;
@@ -89,6 +97,12 @@
 	});
 	document.addEventListener('DOMContentLoaded', function () {
 	                        return _reactDom2.default.render(_react2.default.createElement(_questionOne2.default, null), document.getElementById('reactquestion-one'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_questionTwo2.default, null), document.getElementById('reactquestion-two'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_questionThree2.default, null), document.getElementById('reactquestion-three'));
 	});
 
 /***/ }),
@@ -65195,6 +65209,118 @@
 	                    _react2.default.createElement('input', { className: 'user-input start-button advanced ', id: 'question-one', type: 'button', name: 'skill', value: 'Advanced' })
 	                )
 	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 549 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = QuestionTwo;
+	
+	__webpack_require__(60);
+	
+	__webpack_require__(128);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(130);
+	
+	var _enzymeAdapterReact = __webpack_require__(527);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function QuestionTwo(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { className: 'question-two' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'questions' },
+	            _react2.default.createElement(
+	                'h3',
+	                null,
+	                'What are your workout goals?'
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'choices' },
+	            _react2.default.createElement('input', { className: 'user-input start-button strength', id: 'question-two', type: 'button', name: 'goal', value: 'Strength' }),
+	            _react2.default.createElement('input', { className: 'user-input start-button hypertrophy', id: 'question-two', type: 'button', name: 'goal', value: 'Hypertrophy' }),
+	            _react2.default.createElement('input', { className: 'user-input start-button conditioning', id: 'question-two', type: 'button', name: 'goal', value: 'Conditioning' })
+	        )
+	    );
+	}
+
+/***/ }),
+/* 550 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = QuestionThree;
+	
+	__webpack_require__(60);
+	
+	__webpack_require__(128);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(130);
+	
+	var _enzymeAdapterReact = __webpack_require__(527);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function QuestionThree(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { className: 'question-three' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'questions' },
+	            _react2.default.createElement(
+	                'h3',
+	                null,
+	                'How many days a week can you dedicate to lifting?'
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'choices' },
+	            _react2.default.createElement('input', { className: 'user-input start-button threex', type: 'button', id: 'question-three', name: 'frequency', value: 'Three or Less' }),
+	            _react2.default.createElement('input', { className: 'user-input start-button fourx', type: 'button', id: 'question-three', name: 'frequency', value: 'Four' }),
+	            _react2.default.createElement('input', { className: 'user-input start-button fivex', type: 'button', id: 'question-three', name: 'frequency', value: 'Five or More' })
 	        )
 	    );
 	}
